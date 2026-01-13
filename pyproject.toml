@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools >= 80.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+namespaces = true
+where = ["src"]
+include = ["mayacms.widgets.*"]
+
+[tool.setuptools.package-data]
+"mayacms.widgets.tags" = ["static/**", "templates/**"]
+
+[project]
+name = "mayacms-tags-widget"
+version = "v0.1.0"
+requires-python = ">= 3.14"
+authors = [{name = "Nurul Amin Muhit", email = "me@muhit.me"}]
+maintainers = [{name = "Mayarun Labs", email = "hello@mayarun.io"}]
+description = "The tags form widget for MayaCMS."
+readme = "readme.rst"
+license = 'MIT'
+license-files = ["license.txt"]
+keywords = ["django", "mayacms", "forms", "widgets", "fields", "tags"]
+dependencies = ["mayacms >= 0.1"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Web Environment",
+    "Environment :: Plugins",
+    "Framework :: Django",
+    "Framework :: Django :: 6.0",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Software Development",
+]
+
+[project.urls]
+Homepage = "https://muhit.me"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/iammuhit/django-tags-widget.git"

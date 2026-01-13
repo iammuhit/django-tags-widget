@@ -1,0 +1,4 @@
+recursive-include src/mayacms/widgets/tags/static *
+recursive-include src/mayacms/widgets/tags/templates *
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
